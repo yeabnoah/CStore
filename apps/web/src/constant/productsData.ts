@@ -1,0 +1,198 @@
+import type { Product } from "@/lib/types";
+
+const productsData: Product[] = [
+  {
+    no: 1,
+    description: "150GM ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "200MM", width: "120MM", bottom: "80MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 22,
+    slug: "150gm-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/150gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 2,
+    description: "250GM ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "210MM", width: "140MM", bottom: "60MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 25,
+    slug: "250gm-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/250gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 3,
+    description: "500GM (SMALL) ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "240MM", width: "160MM", bottom: "80MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 30,
+    slug: "500gm-small-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/500gm-small-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 4,
+    description: "500GM (BIG) ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "270MM", width: "165MM", bottom: "90MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 35,
+    slug: "500gm-big-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/500gm-big-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 5,
+    description: "1000GM ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "300MM", width: "200MM", bottom: "100MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 40,
+    slug: "1000gm-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/1000gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 6,
+    description: "1500GM ALUMINUM STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "320MM", width: "220MM", bottom: "100MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 45,
+    slug: "1500gm-aluminum-standup-pouch-with-window-and-zipper",
+    category: "Aluminum Pouches",
+    urls: [
+      "https://picsum.photos/seed/1500gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 7,
+    description: "250GM KRAFT PAPER STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "210MM", width: "140MM", bottom: "60MM" },
+    material: "MOPP/PAPER/PE 155μm",
+    unit_price_birr: 26.5,
+    slug: "250gm-kraft-paper-standup-pouch-with-window-and-zipper",
+    category: "Kraft Paper Pouches",
+    urls: [
+      "https://picsum.photos/seed/250gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 8,
+    description: "500GM KRAFT PAPER STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "240MM", width: "160MM", bottom: "80MM" },
+    material: "MOPP/PAPER/PE 155μm",
+    unit_price_birr: 33,
+    slug: "500gm-kraft-paper-standup-pouch-with-window-and-zipper",
+    category: "Kraft Paper Pouches",
+    urls: [
+      "https://picsum.photos/seed/500gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 9,
+    description: "1000GM KRAFT PAPER STANDUP POUCH WITH WINDOW & ZIPPER",
+    size: { length: "300MM", width: "190MM", bottom: "90MM" },
+    material: "MOPP/PAPER/PE 155μm",
+    unit_price_birr: 44,
+    slug: "1000gm-kraft-paper-standup-pouch-with-window-and-zipper",
+    category: "Kraft Paper Pouches",
+    urls: [
+      "https://picsum.photos/seed/1000gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+    ],
+  },
+  {
+    no: 10,
+    description: "1000GM COFFEE QUADRILATERAL SEALED POUCH",
+    size: { length: "410MM", width: "130MM", side: "(70+70)MM" },
+    material: "MOPP/VMPET/PE 150μm",
+    unit_price_birr: 32,
+    slug: "1000gm-coffee-quadrilateral-sealed-pouch",
+    category: "Coffee Pouches",
+    urls: [
+      "https://picsum.photos/seed/1000gm-coffee-quadrilateral-sealed-pouch/800/600",
+    ],
+  },
+  {
+    no: 11,
+    description: "250GM COFFEE 3D POUCH WITH ZIPPER & VALVE",
+    size: { length: "220MM", width: "125MM", side: "(70+70)MM" },
+    material: "MOPP/VMPET/PE 130μm",
+    unit_price_birr: 46,
+    slug: "250gm-coffee-3d-pouch-with-zipper-and-valve",
+    category: "Coffee Pouches",
+    urls: [
+      "https://picsum.photos/seed/250gm-coffee-3d-pouch-with-zipper-and-valve/800/600",
+    ],
+  },
+  {
+    no: 12,
+    description: "500GM COFFEE 3D POUCH WITH ZIPPER & VALVE",
+    size: { length: "260MM", width: "130MM", side: "(90+90)MM" },
+    material: "MOPP/VMPET/PE 130μm",
+    unit_price_birr: 54,
+    slug: "500gm-coffee-3d-pouch-with-zipper-and-valve",
+    category: "Coffee Pouches",
+    urls: [
+      "https://picsum.photos/seed/500gm-coffee-3d-pouch-with-zipper-and-valve/800/600",
+    ],
+  },
+  {
+    no: 13,
+    description: "1KG COFFEE 3D POUCH WITH ZIPPER & VALVE",
+    size: { length: "300MM", width: "145MM", side: "(100+100)MM" },
+    material: "MOPP/VMPET/PE 130μm",
+    unit_price_birr: 64,
+    slug: "1kg-coffee-3d-pouch-with-zipper-and-valve",
+    category: "Coffee Pouches",
+    urls: [
+      "https://picsum.photos/seed/1kg-coffee-3d-pouch-with-zipper-and-valve/800/600",
+    ],
+  },
+  {
+    no: 14,
+    description: "TRANSPARENT STANDUP POUCH WITH ZIPPER",
+    size: { length: "210MM", width: "140MM", bottom: "60MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 24,
+    slug: "transparent-standup-pouch-with-zipper-210x140x60",
+    category: "Transparent Pouches",
+    urls: [
+      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-210x140x60/800/600",
+    ],
+  },
+  {
+    no: 15,
+    description: "TRANSPARENT STANDUP POUCH WITH ZIPPER",
+    size: { length: "270MM", width: "165MM", bottom: "90MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 29,
+    slug: "transparent-standup-pouch-with-zipper-270x165x90",
+    category: "Transparent Pouches",
+    urls: [
+      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-270x165x90/800/600",
+    ],
+  },
+  {
+    no: 16,
+    description: "TRANSPARENT STANDUP POUCH WITH ZIPPER",
+    size: { length: "320MM", width: "220MM", bottom: "100MM" },
+    material: "PET/VMPET/PE 120μm",
+    unit_price_birr: 39,
+    slug: "transparent-standup-pouch-with-zipper-320x220x100",
+    category: "Transparent Pouches",
+    urls: [
+      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-320x220x100/800/600",
+    ],
+  },
+];
+
+export default productsData;
