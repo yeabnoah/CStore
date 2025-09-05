@@ -7,13 +7,13 @@ export default function Footer() {
 						<strong>Bini Packaging</strong> — Quality packaging solutions
 					</p>
 					<nav className="flex gap-4">
-						<a href="#" aria-label="Twitter">
-							Twitter
+						<a href="https://t.me/binipackaging" aria-label="Telegram">
+							Telegram
 						</a>
-						<a href="#" aria-label="Instagram">
-							Instagram
+						<a href="https://www.tiktok.com/@bini.package?_t=ZM-8zTBLwtV9vS&_r=1" aria-label="TikTok">
+							TikTok
 						</a>
-						<a href="#" aria-label="Contact">
+						<a href="/contact" aria-label="Contact">
 							Contact
 						</a>
 					</nav>

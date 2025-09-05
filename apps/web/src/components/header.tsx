@@ -4,6 +4,9 @@ import { useEffect, useState } from "react";
 import { ModeToggle } from "./mode-toggle";
 import { Input } from "@/components/ui/input";
 import Image from "next/image";
+import productsData from "@/constant/productsData";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import type { Route } from "next";
 
 export default function Header() {
 	const links = [
@@ -13,6 +16,30 @@ export default function Header() {
 		{ to: "/contact", label: "Contact" },
 	] as const;
 	const [menuOpen, setMenuOpen] = useState(false);
+	const [query, setQuery] = useState("");
+	const [isFocused, setIsFocused] = useState(false);
+	const router = useRouter();
+	const pathname = usePathname();
+	const searchParams = useSearchParams();
+
+	useEffect(() => {
+		const q = searchParams.get("q") ?? "";
+		setQuery(q);
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [searchParams]);
+
+	const results = query
+		? productsData
+			.filter((p) => {
+				const q = query.toLowerCase();
+				return (
+					p.description.toLowerCase().includes(q) ||
+					p.category.toLowerCase().includes(q) ||
+					p.slug.toLowerCase().includes(q)
+				);
+			})
+			.slice(0, 8)
+		: [];
 
 	// Lock body scroll when sidebar is open
 	useEffect(() => {
@@ -50,11 +77,42 @@ export default function Header() {
 					</div>
 
 					<div className="hidden md:flex flex-1 items-center justify-center">
-						<div className="w-full max-w-xl">
+						<div className="w-full max-w-xl relative">
 							<Input
 								placeholder="Search packaging…"
 								className="h-10 rounded-full"
+								value={query}
+								onChange={(e) => {
+									const v = e.target.value;
+									setQuery(v);
+									const url = (v ? `${pathname}?q=${encodeURIComponent(v)}` : pathname) as Route;
+									router.replace(url);
+								}}
+								onFocus={() => setIsFocused(true)}
+								onBlur={() => setTimeout(() => setIsFocused(false), 100)}
+								onKeyDown={(e) => {
+									if (e.key === "Enter" && results.length > 0) {
+										router.push(`/product/${results[0].slug}`);
+										setQuery("");
+									}
+								}}
 							/>
+							{isFocused && query && results.length > 0 ? (
+								<ul className="absolute z-50 mt-2 w-full max-h-80 overflow-auto rounded-md border bg-background p-1 shadow">
+									{results.map((p) => (
+										<li key={p.slug}>
+											<Link
+												href={`/product/${p.slug}`}
+												className="flex items-start gap-2 rounded px-3 py-2 text-sm hover:bg-accent"
+												onClick={() => setQuery("")}
+											>
+												<span className="font-medium">{p.description}</span>
+												<span className="ml-auto text-xs opacity-70">{p.category}</span>
+											</Link>
+										</li>
+									))}
+								</ul>
+							) : null}
 						</div>
 					</div>
 
@@ -66,16 +124,47 @@ export default function Header() {
 								</Link>
 							))}
 						</nav>
-						<button className="inline-flex h-9 w-9 items-center justify-center rounded-md border" aria-label="Cart">
-							<span>🛒</span>
-						</button>
 						<ModeToggle />
 					</div>
 				</div>
 
 				{/* Mobile search */}
-				<div className="py-2 md:hidden">
-					<Input placeholder="Search packaging…" className="h-10 rounded-full" />
+				<div className="py-2 md:hidden relative">
+					<Input
+						placeholder="Search packaging…"
+						className="h-10 rounded-full"
+						value={query}
+						onChange={(e) => {
+							const v = e.target.value;
+							setQuery(v);
+							const url = (v ? `${pathname}?q=${encodeURIComponent(v)}` : pathname) as Route;
+							router.replace(url);
+						}}
+						onFocus={() => setIsFocused(true)}
+						onBlur={() => setTimeout(() => setIsFocused(false), 100)}
+						onKeyDown={(e) => {
+							if (e.key === "Enter" && results.length > 0) {
+								router.push(`/product/${results[0].slug}`);
+								setQuery("");
+							}
+						}}
+					/>
+					{isFocused && query && results.length > 0 ? (
+						<ul className="absolute z-50 mt-2 w-full max-h-80 overflow-auto rounded-md border bg-background p-1 shadow">
+							{results.map((p) => (
+								<li key={p.slug}>
+									<Link
+										href={`/product/${p.slug}`}
+										className="flex items-start gap-2 rounded px-3 py-2 text-sm hover:bg-accent"
+										onClick={() => setQuery("")}
+									>
+										<span className="font-medium">{p.description}</span>
+										<span className="ml-auto text-xs opacity-70">{p.category}</span>
+									</Link>
+								</li>
+							))}
+						</ul>
+					) : null}
 				</div>
 
 				{/* Mobile sidebar + overlay */}

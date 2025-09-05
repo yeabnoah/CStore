@@ -2,12 +2,21 @@
 
 import ProductCard from "@/components/product-card";
 import productsData from "@/constant/productsData";
-import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 export default function Home() {
+	const searchParams = useSearchParams();
+	const q = (searchParams.get("q") ?? "").toLowerCase();
+	const filtered = q
+		? productsData.filter((p) =>
+				p.description.toLowerCase().includes(q) ||
+				p.category.toLowerCase().includes(q) ||
+				p.slug.toLowerCase().includes(q)
+		  )
+		: productsData;
 	return (
 		<div className="space-y-8">
-			<section className="relative overflow-hidden rounded-2xl border p-8 sm:p-12">
+			<section className="relative hidden md:block overflow-hidden rounded-2xl border p-8 sm:p-12">
 				{/* Decorative background */}
 				<div className="pointer-events-none absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary/10 blur-3xl" />
 				<div className="pointer-events-none absolute -bottom-20 -left-20 h-72 w-72 rounded-full bg-secondary/10 blur-3xl" />
@@ -44,8 +53,13 @@ export default function Home() {
 				</div>
 			</section>
 			<section id="products">
+				{q ? (
+					<div className="mb-2 text-sm text-muted-foreground">
+						Showing {filtered.length} result{filtered.length === 1 ? "" : "s"} for "{searchParams.get("q")}".
+					</div>
+				) : null}
 				<div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-					{productsData.map((p) => (
+					{filtered.map((p) => (
 						<ProductCard key={p.slug} product={p} />
 					))}
 				</div>
