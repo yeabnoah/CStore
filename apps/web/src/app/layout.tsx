@@ -4,6 +4,7 @@ import "../index.css";
 import Providers from "@/components/providers";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -32,7 +33,9 @@ export default function RootLayout({
 			>
 				<Providers>
 					<div className="grid grid-rows-[auto_1fr_auto] min-h-svh">
-						<Header />
+						<Suspense fallback={null}>
+							<Header />
+						</Suspense>
 						<main className="mx-auto w-full max-w-6xl px-3 py-6">{children}</main>
 						<Footer />
 					</div>
