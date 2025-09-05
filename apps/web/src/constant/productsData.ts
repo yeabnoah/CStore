@@ -188,6 +188,37 @@ const productsData: Product[] = [
     category: "Transparent Pouches",
     urls: ["https://i.ibb.co/5WWpTMpL/image.png"],
   },
+  // Coffee cups
+  {
+    no: 17,
+    description: "COFFEE CUP 12OZ",
+    size: { length: "12OZ", width: "12OZ" },
+    material: "Paper cup",
+    unit_price_birr: 15,
+    slug: "coffee-cup-12oz-15-birr",
+    category: "Coffee Cups",
+    urls: ["https://i.ibb.co/mVrbp7Fr/image.png"],
+  },
+  {
+    no: 18,
+    description: "COFFEE CUP 12OZ",
+    size: { length: "12OZ", width: "12OZ" },
+    material: "Paper cup",
+    unit_price_birr: 18,
+    slug: "coffee-cup-12oz-18-birr",
+    category: "Coffee Cups",
+    urls: ["https://i.ibb.co/9HvyQf50/image.png"],
+  },
+  {
+    no: 19,
+    description: "COFFEE CUP 8OZ",
+    size: { length: "8OZ", width: "8OZ" },
+    material: "Paper cup",
+    unit_price_birr: 15,
+    slug: "coffee-cup-8oz-15-birr",
+    category: "Coffee Cups",
+    urls: ["https://i.ibb.co/rnNBK6t/image.png"],
+  },
 ];
 
 export default productsData;

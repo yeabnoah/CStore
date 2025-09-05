@@ -2,7 +2,8 @@ export type ProductCategory =
   | "Aluminum Pouches"
   | "Kraft Paper Pouches"
   | "Coffee Pouches"
-  | "Transparent Pouches";
+  | "Transparent Pouches"
+  | "Coffee Cups";
 
 export type ProductSize = {
   length: string;
