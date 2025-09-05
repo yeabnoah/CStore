@@ -10,7 +10,8 @@ const productsData: Product[] = [
     slug: "150gm-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/150gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -22,7 +23,8 @@ const productsData: Product[] = [
     slug: "250gm-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/250gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -34,7 +36,8 @@ const productsData: Product[] = [
     slug: "500gm-small-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/500gm-small-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -46,7 +49,8 @@ const productsData: Product[] = [
     slug: "500gm-big-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/500gm-big-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -58,7 +62,8 @@ const productsData: Product[] = [
     slug: "1000gm-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/1000gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -70,7 +75,8 @@ const productsData: Product[] = [
     slug: "1500gm-aluminum-standup-pouch-with-window-and-zipper",
     category: "Aluminum Pouches",
     urls: [
-      "https://picsum.photos/seed/1500gm-aluminum-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/sYPxS8w/image.png",
+      "https://i.ibb.co/GQZYXwPF/image.png",
     ],
   },
   {
@@ -82,7 +88,8 @@ const productsData: Product[] = [
     slug: "250gm-kraft-paper-standup-pouch-with-window-and-zipper",
     category: "Kraft Paper Pouches",
     urls: [
-      "https://picsum.photos/seed/250gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/5gqtNT5j/image.png",
+      "https://i.ibb.co/chrCLK4h/image.png",
     ],
   },
   {
@@ -94,7 +101,8 @@ const productsData: Product[] = [
     slug: "500gm-kraft-paper-standup-pouch-with-window-and-zipper",
     category: "Kraft Paper Pouches",
     urls: [
-      "https://picsum.photos/seed/500gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/5gqtNT5j/image.png",
+      "https://i.ibb.co/chrCLK4h/image.png",
     ],
   },
   {
@@ -106,7 +114,8 @@ const productsData: Product[] = [
     slug: "1000gm-kraft-paper-standup-pouch-with-window-and-zipper",
     category: "Kraft Paper Pouches",
     urls: [
-      "https://picsum.photos/seed/1000gm-kraft-paper-standup-pouch-with-window-and-zipper/800/600",
+      "https://i.ibb.co/5gqtNT5j/image.png",
+      "https://i.ibb.co/chrCLK4h/image.png",
     ],
   },
   {
@@ -117,9 +126,7 @@ const productsData: Product[] = [
     unit_price_birr: 32,
     slug: "1000gm-coffee-quadrilateral-sealed-pouch",
     category: "Coffee Pouches",
-    urls: [
-      "https://picsum.photos/seed/1000gm-coffee-quadrilateral-sealed-pouch/800/600",
-    ],
+    urls: ["https://i.ibb.co/XZ1gvH1D/image.png"],
   },
   {
     no: 11,
@@ -129,9 +136,7 @@ const productsData: Product[] = [
     unit_price_birr: 46,
     slug: "250gm-coffee-3d-pouch-with-zipper-and-valve",
     category: "Coffee Pouches",
-    urls: [
-      "https://picsum.photos/seed/250gm-coffee-3d-pouch-with-zipper-and-valve/800/600",
-    ],
+    urls: ["https://i.ibb.co/BV58Dhww/image.png"],
   },
   {
     no: 12,
@@ -141,9 +146,7 @@ const productsData: Product[] = [
     unit_price_birr: 54,
     slug: "500gm-coffee-3d-pouch-with-zipper-and-valve",
     category: "Coffee Pouches",
-    urls: [
-      "https://picsum.photos/seed/500gm-coffee-3d-pouch-with-zipper-and-valve/800/600",
-    ],
+    urls: ["https://i.ibb.co/BV58Dhww/image.png"],
   },
   {
     no: 13,
@@ -153,9 +156,7 @@ const productsData: Product[] = [
     unit_price_birr: 64,
     slug: "1kg-coffee-3d-pouch-with-zipper-and-valve",
     category: "Coffee Pouches",
-    urls: [
-      "https://picsum.photos/seed/1kg-coffee-3d-pouch-with-zipper-and-valve/800/600",
-    ],
+    urls: ["https://i.ibb.co/BV58Dhww/image.png"],
   },
   {
     no: 14,
@@ -165,9 +166,7 @@ const productsData: Product[] = [
     unit_price_birr: 24,
     slug: "transparent-standup-pouch-with-zipper-210x140x60",
     category: "Transparent Pouches",
-    urls: [
-      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-210x140x60/800/600",
-    ],
+    urls: ["https://i.ibb.co/5WWpTMpL/image.png"],
   },
   {
     no: 15,
@@ -177,9 +176,7 @@ const productsData: Product[] = [
     unit_price_birr: 29,
     slug: "transparent-standup-pouch-with-zipper-270x165x90",
     category: "Transparent Pouches",
-    urls: [
-      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-270x165x90/800/600",
-    ],
+    urls: ["https://i.ibb.co/5WWpTMpL/image.png"],
   },
   {
     no: 16,
@@ -189,9 +186,7 @@ const productsData: Product[] = [
     unit_price_birr: 39,
     slug: "transparent-standup-pouch-with-zipper-320x220x100",
     category: "Transparent Pouches",
-    urls: [
-      "https://picsum.photos/seed/transparent-standup-pouch-with-zipper-320x220x100/800/600",
-    ],
+    urls: ["https://i.ibb.co/5WWpTMpL/image.png"],
   },
 ];
 

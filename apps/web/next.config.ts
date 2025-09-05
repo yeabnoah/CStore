@@ -3,7 +3,7 @@ import type { NextConfig } from "next";
 const nextConfig: NextConfig = {
   typedRoutes: true,
   images: {
-    domains: ["picsum.photos"],
+    domains: ["picsum.photos", "i.ibb.co"],
   },
 };
 
