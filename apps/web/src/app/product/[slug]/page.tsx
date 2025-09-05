@@ -1,4 +1,5 @@
 import ImageWithSkeleton from "@/components/image-with-skeleton";
+import ImageCarousel from "@/components/image-carousel";
 import productsData from "@/constant/productsData";
 import type { Product } from "@/lib/types";
 import { formatBirr } from "@/lib/utils";
@@ -17,30 +18,9 @@ export default async function ProductPage({
   const product: Product | undefined = productsData.find((p) => p.slug === slug);
   if (!product) return notFound();
 
-  const [primaryImage, ...otherImages] = product.urls;
-
   return (
     <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 p-4 md:grid-cols-2">
-      <div className="space-y-4">
-        {primaryImage ? (
-          <div className="relative aspect-square w-full overflow-hidden rounded-xl border">
-            <ImageWithSkeleton
-              src={primaryImage}
-              alt={product.description}
-              sizes="(max-width: 768px) 100vw, 50vw"
-            />
-          </div>
-        ) : null}
-        {otherImages.length > 0 ? (
-          <div className="grid grid-cols-3 gap-2">
-            {otherImages.map((url) => (
-              <div key={url} className="relative aspect-square overflow-hidden rounded-lg border">
-                <ImageWithSkeleton src={url} alt={product.description} />
-              </div>
-            ))}
-          </div>
-        ) : null}
-      </div>
+      <ImageCarousel images={product.urls} alt={product.description} />
       <div className="space-y-4">
         <h1 className="text-2xl font-semibold leading-tight">{product.description}</h1>
         <div className="flex flex-wrap items-center gap-2 text-sm">
